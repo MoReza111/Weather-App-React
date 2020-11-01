@@ -1,4 +1,5 @@
 import React from 'react'
+import Weather from './Weather'
 
 
 const Weathers = ({ forecast }) => {
@@ -47,6 +48,16 @@ const Weathers = ({ forecast }) => {
                                 <p>Sunset</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className="forecasts">
+                    <div>
+                        <h3>Forecast</h3>
+                    </div>
+                    <div className="cards">
+                        {forecast.forecast.forecastday[0].hour.map(h =>
+                            <Weather hour={h} />
+                        )}
                     </div>
                 </div>
             </div>

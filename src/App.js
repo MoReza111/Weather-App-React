@@ -18,7 +18,7 @@ const App = () => {
       <Navbar />
       <div className="container">
         <Search getWeather={getWeather} />
-        <Weathers forecast={forecast} />
+        {forecast && <Weathers forecast={forecast} />}
       </div>
     </div>
   )
