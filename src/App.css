@@ -20,7 +20,7 @@ nav{
 form {
   display: flex;
   justify-content: center;
-  margin-top: 7em ;
+  margin:  7em 0 1em  0;
 }
 input , button {
   padding: .5em;
@@ -31,4 +31,41 @@ input {
 }
 button{
   border-radius: 0 1em 1em 0 ;
+}
+.current__condtion{
+  display: flex;
+  justify-content: space-evenly;
+}
+.temp{
+  display:flex;
+  width:50%;
+  height: 100%;
+}
+.temp img{
+  width:50%;
+}
+.temp .texts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2rem;
+}
+.conditions {
+  width:50%;
+  background-color: rgba(256,256,256,0.3);
+  border-radius: .5em;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+.row div{
+  width:30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
