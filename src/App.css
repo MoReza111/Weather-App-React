@@ -2,6 +2,33 @@
   margin:0;
 }
 .container{
-  width: 75%;
+  width: 95%;
   margin:0 auto;
+}
+body{
+  height: 100vh;
+  background: url('img/2850815.jpg') no-repeat ;
+  background-size: cover;
+  color: #fff;
+  font-size: 1.25rem;
+  font-family: sans-serif;
+}
+nav{
+  margin: .6em;
+  font-size: 1rem;
+}
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 7em ;
+}
+input , button {
+  padding: .5em;
+}
+input {
+  border-radius: 1em 0 0 1em ;
+  width : 30%;
+}
+button{
+  border-radius: 0 1em 1em 0 ;
 }
