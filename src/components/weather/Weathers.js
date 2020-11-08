@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Weather from './Weather'
 
+import WeatherContext from './../../context/weather/weatherContext'
 
-const Weathers = ({ forecast }) => {
-    console.log(forecast)
+
+const Weathers = () => {
+
+    const weatherContext = useContext(WeatherContext)
+
+    const { forecast, loading } = weatherContext
+
     if (forecast) {
         return (
             <div>

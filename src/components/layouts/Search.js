@@ -1,20 +1,22 @@
-import React, { useState } from 'react'
+import React, { useRef, useContext } from 'react'
 
-const Search = ({ getWeather }) => {
+import WeatherContext from './../../context/weather/weatherContext'
 
-    const [text, setText] = useState('')
+const Search = () => {
+    const text = useRef('')
+    const weatherContext = useContext(WeatherContext)
+
+    const { getWeather } = weatherContext
 
     const onSubmit = (e) => {
         e.preventDefault()
-        getWeather(text)
-        setText('')
+        getWeather(text.current.value)
     }
 
-    const onChange = (e) => setText(e.target.value)
 
     return (
         <form onSubmit={onSubmit}>
-            <input type="text" placeholder="Enter City Name" onChange={onChange} />
+            <input type="text" placeholder="Enter City Name" ref={text} />
             <button type="submit"><i className="fa fa-search" aria-hidden="true"></i></button>
         </form>
     )
